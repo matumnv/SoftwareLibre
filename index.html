@@ -136,22 +136,39 @@
                     <div class="tab-pane fade" id="tabs-gallery-4">
                       <div class="gallery-wrap">
                         <div class="gallery-wrap-inner">
+                        
                           <h4>ChatBoot</h4>
                           <div class="dots-custom-nature"></div><a class="back-to-gallery button-link button-link-icon" href="#"><span class="novi-icon icon icon-primary fa fa-angle-left"></span><span>Volver Home</span></a>
-                        
+                          
                         </div>
                         
-                        <div class="gallery-wrap-inner">
+                        
+                        <div align="center" class="gallery-wrap-inner">
                           <!-- Owl Carousel-->
-                          <div  style=text-align:center; class="owl-carousel owl-gallery" data-items="1" data-dots="true" data-nav="false" data-stage-padding="0" data-loop="false" data-margin="0" data-mouse-drag="false" data-lightgallery="group" data-pagination-class=".dots-custom-nature"><a class="gallery-item" href="images/gallery-nature-07-970x524.jpg" data-lightgallery="item">
-                            <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-                            <div id="myLandbot" style="width: 800px; height: 800px;" ></div>
+                          
+                            <figure> <img src="images/gallery-fashion-055-970x524.jpg" alt="" width="570" height="524"/>
+                            </figure>
+                          <div  class="owl-carousel owl-gallery" data-items="1" data-dots="true" data-nav="false" data-stage-padding="0" data-loop="false" data-margin="0" data-mouse-drag="false" data-lightgallery="group" data-pagination-class=".dots-custom-nature"><a class="gallery-item" href="images/gallery-nature-07-970x524.jpg" data-lightgallery="item">
+                            
                             <script>
-                              var myLandbot = new Landbot.Container({
-                                container: '#myLandbot',
-                                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1634849-P4BAKK6XM7G077KU/index.json',
-                              });
-                            </script>
+                              window.addEventListener('mouseover', initLandbot, { once: true });
+                              window.addEventListener('touchstart', initLandbot, { once: true });
+                              var myLandbot;
+                              function initLandbot() {
+                                if (!myLandbot) {
+                                  var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+                                  s.addEventListener('load', function() {
+                                    var myLandbot = new Landbot.Livechat({
+                                      configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1634849-P4BAKK6XM7G077KU/index.json',
+                                    });
+                                  });
+                                  s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+                                  var x = document.getElementsByTagName('script')[0];
+                                  x.parentNode.insertBefore(s, x);
+                                }
+                              }
+                              </script>
+                              
                           </div>
                         </div>
                       </div>
